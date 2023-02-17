@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * Main-print
+ * main - print alphabet both upper and lower case
  *
- *Return: 0(Success)
- *
- * hello
+ * Return: 0 (Success)
  */
 
 int main(void)
