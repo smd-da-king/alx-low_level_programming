@@ -1,18 +1,19 @@
  #include <stdio.h>
 
-int main(void)
 /**
- * Main-find
+ * main-print string
  *
- *Return 0
+ *Return: 0(succes)
  *
  */
+int main(void)
+
 {
 char c;
 for (c = 'a'; c <= 'z'; ++c)
 {
 	putchar(c);
- 	putchar("\n");
+
 }
-return 0;
+return (0);
 }
