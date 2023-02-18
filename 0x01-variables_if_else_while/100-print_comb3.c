@@ -3,37 +3,29 @@
 /**
  * main - print all the possible combinations of two digits
  *
- * return: (0) success
+ * Return: (0) success
  */
 
 int main(void)
 {
-	int i;
-	int j;
+int i;
+int j;
 
-	for (i = 0; i <= 9; i++)
-	{
-		for (j = 0; j <= 9; j++)
-		{
-			if (i == j)
-			{
-			continue;
-			}
-			else if (i == j && j == i)
-			{
-				putchar(i);
-				putchar(j);
-				putchar(',');
-				putchar(' ');
-			}
-			else
-			{
+for (i = '0'; i <= '9'; i++)
+{
+for (j = '0'; j <= '9'; j++)
+{
+if (i == j)
+{
+continue;
+}
 
-			}
-		}
-
-
-	}
-			putchar('\n');
+putchar(i);
+putchar(j);
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
 return (0);
 }
