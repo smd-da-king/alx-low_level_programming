@@ -24,7 +24,7 @@ if (i == j)
 {
 continue;
 }
-else if (k != l || k == l )
+else if (k != l || k == l)
 {
 putchar('0' + i);
 putchar('0' + j);
