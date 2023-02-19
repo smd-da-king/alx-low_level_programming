@@ -10,8 +10,11 @@ int main(void)
 {
 int i;
 int j;
-int k = j * i;
-int l = i * j;
+int k = 0;
+int l = 0;
+k = i * j;
+l = j * i;
+
 
 for (i = 0; i <= 9; i++)
 {
