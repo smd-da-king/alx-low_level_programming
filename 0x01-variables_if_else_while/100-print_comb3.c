@@ -10,20 +10,28 @@ int main(void)
 {
 int i;
 int j;
+int k = j * i;
+int l = i * j;
 
-for (i = '0'; i <= '9'; i++)
+for (i = 0; i <= 9; i++)
 {
-for (j = '0'; j <= '9'; j++)
+for (j = 0; j <= 9; j++)
 {
 if (i == j)
 {
 continue;
 }
-
-putchar(i);
-putchar(j);
+else if (k != l || k == l )
+{
+putchar('0' + i);
+putchar('0' + j);
 putchar(',');
 putchar(' ');
+}
+else
+{
+continue;
+}
 }
 }
 putchar('\n');
