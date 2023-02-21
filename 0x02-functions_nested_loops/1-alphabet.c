@@ -8,9 +8,10 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int alpha(void)
+void alpha(void)
 {
 int i;
+
 for (i = 'a'; i <= 'z'; i++)
 {
 putchar(i);
