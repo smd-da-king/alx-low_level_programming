@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
 *_islower - check whether integer is lowercase
