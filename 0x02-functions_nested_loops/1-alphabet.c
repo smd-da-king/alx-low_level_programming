@@ -15,7 +15,6 @@ for (i = 'a'; i <= 'z'; i++)
 {
 putchar(i);
 }
-putchar('\n');
 }
 /**
  *main - writes the character c to stdout
@@ -27,5 +26,6 @@ putchar('\n');
 int main(void)
 {
 alpha();
+putchar('\n');
 return (0);
 }
