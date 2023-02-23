@@ -3,11 +3,11 @@
 /**
 *mul - multiplication
 *@a: var1
-*@b: var2
+i*@b: var2
 *Return: a*b
 */
 
-iint mul(int a, int b)
+int mul(int a, int b)
 {
 return(a * b);
 }
