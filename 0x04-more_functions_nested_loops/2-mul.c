@@ -3,7 +3,7 @@
 /**
 *mul - multiplication
 *@a: var1
-i*@b: var2
+*@b: var2
 *Return: a*b
 */
 
