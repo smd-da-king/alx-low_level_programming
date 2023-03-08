@@ -1,35 +1,57 @@
 #include "main.h"
-#include <string.h>
 
 /**
-* is_palindrome - function name
-* s: var4
-* i: var1
-* length: var2
-* flag: var3
-* @s: varb4
-* Return: 0- fail and 1- success
-*/
+ * get_length - Entry point
+ * Description: Get the legth
+ * @s: Character
+ * Return: 1 if palindrome 0 otherwise
+ */
+
+int get_length(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + get_length(s + 1));
+}
+
+/**
+ * check_palindrome - Entry point
+ * Description: Checking Palindrome
+ * @s: Character
+ * @start: Integer
+ * @end: Integer
+ * Return: 1 if palindrome 0 otherwise
+ */
+
+int check_palindrome(char *s, int start, int end)
+{
+	if (start >= end)
+	{
+		return (1);
+	}
+	if (*(s + start) == *(s + end))
+	{
+		return (check_palindrome(s, start + 1, end - 1));
+	}
+	return (0);
+}
+
+/**
+ * is_palindrome - Entry point
+ * Description: Palindrome
+ * @s: Character
+ * Return: 1 if palindrome 0 otherwise
+ */
+
 int is_palindrome(char *s)
 {
-int i, length;
-int flag = 0;
+	int len = get_length(s);
 
-length = strlen(s);
-for (i = 0; i < length; i++)
-{
-if (s[i] != s[length - i - 1])
-{
-flag = 1;
-break;
-}
-}
-if (flag)
-{
-return (0);
-}
-else
-{
-return (1);
-}
+	if (len == 0 || len == 1)
+	{
+		return (1);
+	}
+	return (check_palindrome(s, 0, len - 1));
 }
