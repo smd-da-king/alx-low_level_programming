@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * print_listint - Entry point
  * Description: Prints all the elements of a listint_t list.
