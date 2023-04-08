@@ -10,8 +10,6 @@
 int get_endianness(void)
 {
 	unsigned int digitss = 1;
-	
-/* Convert the memory address of the int digit into a pointer to a char */
 	char *data = (char *)&digitss;
 
 	if (*data)
