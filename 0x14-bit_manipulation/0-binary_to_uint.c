@@ -10,18 +10,35 @@
 
 unsigned int binary_to_uint(const char *b)
 {
+	unsigned int digits = 0;
 	unsigned int x = 0;
-	int y = 0;
 
-	if (b[y] == '\0')
-		return (0);
-
-	while ((b[y] == '0') || (b[y] == '1'))
+	/* Check if b is NULL */
+	if (!b)
 	{
-		x <<= 1;
-		x += b[y] - '0';
-		y++;
+		return (0);
 	}
-
-	return (x);
+	/* Loop: gets the length of the binary string */
+	while (b[x] != '\0')
+	{
+		/* Checks if char is not 0 or 1 */
+		if (b[x] != '0' && b[x] != '1')
+		{
+			return (0);
+		}
+		x++;
+	}
+	/* Get the decimal value of the binary string */
+	x = 0;
+	while (b[x] != '\0')
+	{
+		/* Left shift the digit by 1 bit or space */
+		digits <<= 1;
+		if (b[x] == '1')
+		{
+			digits += 1;
+		}
+		x++;
+	}
+	return (digits);
 }
