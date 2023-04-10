@@ -26,7 +26,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		/* Counts the number of characters in text_content */
 		while (text_content[i])
 			i++;
-		
 /* Write text_content to file */
 		my_write = write(td, text_content, i);
 		/* Checls if writing to the file failed */
