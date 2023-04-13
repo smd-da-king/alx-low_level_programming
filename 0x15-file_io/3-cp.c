@@ -22,7 +22,6 @@ char *allocate_buffer(char *filename)
 
 	if (!buffer)
 	{
-		
 /* Printing error mesage if buffer allocation failes */
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
