@@ -1,3 +1,3 @@
 #!/bin/bash
 gcc -E $CFILE -o c
-to be removed
+to be re
