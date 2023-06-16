@@ -1,18 +1,21 @@
 #include "lists.h"
 
 /**
- * sum_dlistint - sum data of doubly lniked list
+ * get_dnodeint_at_index - get node at index of a doubly lniked list
  * @head: head of the linked list
- * Return: sum of the data
+ * @index: index to get
+ * Return: length of the list
  */
-int sum_dlistint(dlistint_t *head)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	size_t sum = 0;
+	size_t count = 0;
 
 	while (head != NULL)
 	{
-		sum += head->n;
+		if (count == index)
+			break;
 		head = head->next;
+		count++;
 	}
-	return (sum);
+	return (head);
 }
