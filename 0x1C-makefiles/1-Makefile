@@ -1,0 +1,15 @@
+#Define variables
+CC = gcc
+SRC = main.c school.c
+OBJS = $(SRC:.c=.o)
+
+all: school
+
+school: $(OBJS)
+	$(CC) -o school $^
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	rm -f $(OBJS)
